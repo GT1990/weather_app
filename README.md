@@ -14,7 +14,10 @@ The app.js file uses the readline module to prompt user to input a U.S. city or 
 
 The weather.app module takes the user input and request weather data from the openweather api, printing the current temperature to the console.
 
+## Table of Contents
+
 - [weather_app](#weather_app)
   - [Example](#example)
   - [app.js](#appjs)
   - [weather.js](#weatherjs)
+  - [Table of Contents](#table-of-contents)
