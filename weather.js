@@ -2,6 +2,8 @@
 const https = require("https");
 // Require http
 const http = require("http");
+// Require api
+const api = require("./api.json");
 
 function printError(message) {
   console.error(message);
@@ -13,10 +15,10 @@ function get(query) {
     let api_url = "";
     if (query.match(numbersRegEx)) {
       // zip code
-      api_url = `https://api.openweathermap.org/data/2.5/weather?zip=${query}&units=imperial&appid=9b21dfcf8332cd6e79093d8e50994796`;
+      api_url = `https://api.openweathermap.org/data/2.5/weather?zip=${query}&units=imperial&appid=${api.key}`;
     } else {
       // city name
-      api_url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=imperial&appid=9b21dfcf8332cd6e79093d8e50994796`;
+      api_url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=imperial&appid=${api.key}`;
     }
     const request = https.get(api_url, (response) => {
       if (response.statusCode === 200) {
