@@ -1,5 +1,6 @@
 // Require https (need for proccess.argv)
 const https = require("https");
+// Require http
 const http = require("http");
 
 function printError(message) {
